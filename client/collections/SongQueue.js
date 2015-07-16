@@ -7,6 +7,7 @@ var SongQueue = Songs.extend({
       // console.log(this);
       // console.log(this.models);
     });
+  },
+  playFirst: function(){
   }
-
 });
