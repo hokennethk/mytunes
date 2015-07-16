@@ -1,0 +1,29 @@
+
+.center {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.title {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.queue, .library {
+  margin-top: 30px;
+}
+
+/* Typography */
+
+body {
+  font-family: 'Abel', sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+table {
+  font-size: 1.3em;
+}
