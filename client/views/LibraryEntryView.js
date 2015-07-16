@@ -17,3 +17,4 @@ var LibraryEntryView = Backbone.View.extend({
   }
 
 });
+ 

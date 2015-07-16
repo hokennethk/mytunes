@@ -3,7 +3,9 @@ var SongQueue = Songs.extend({
 
   initialize: function(){
     this.on('ended', function() {
-      console.log('dfadsfdasfdafa');
+      // this.remove()
+      // console.log(this);
+      // console.log(this.models);
     });
   }
 
