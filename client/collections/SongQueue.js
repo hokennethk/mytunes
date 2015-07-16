@@ -2,19 +2,8 @@
 var SongQueue = Songs.extend({
   // model should be SONG
   initialize: function(){
-    // when song sends ended, this collection will hear it
-    // this.on('ended', function(song) {
-    //   console.log('song queue event: ended');
-    //   this.get(song).dequeue();
-    // });
 
-    /*** NOT SURE IF SHOULD PUT HERE OR IN APP MODEL ***/
-    this.on('dequeue', function(song) {
-      this.remove(song);
-      if (this.length) {
-        this.playFirst();
-      }
-    });
+    this.on('dequeue', this.dequeue, this);
 
     this.on('add', function() {
       if (this.length === 1) {
@@ -25,6 +14,15 @@ var SongQueue = Songs.extend({
 
   playFirst: function() {
     this.first().play(); // song.play() will set current song on app to itself
+  },
+
+  dequeue: function(song) {
+    this.remove(song);
+    if (this.length >= 1) {
+      this.playFirst();
+    } else {
+      this.trigger('stop', this);
+    }
   }
 
 });
