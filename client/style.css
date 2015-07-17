@@ -11,13 +11,15 @@
 }
 
 .queue, .library {
-  margin-top: 10px;
+
 }
 
 /* Typography */
 
 body {
+  position: relative;
   font-family: 'Abel', sans-serif;
+  bottom: 30px;
 }
 
 h1 {
@@ -26,4 +28,10 @@ h1 {
 
 table {
   font-size: 1.3em;
+}
+
+audio {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
