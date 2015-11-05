@@ -32,6 +32,6 @@ table {
 
 audio {
   position: fixed;
-  bottom: 0;
+  bottom: 10%;
   width: 100%;
 }
